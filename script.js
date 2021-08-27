@@ -1,3 +1,85 @@
+
+(function() {
+  function greet() {
+    const greeting = [
+        {
+            "Sunday": "You need Jesus! Go to Church!"
+        },
+        {
+            "Monday": "Hello! It's Monday. Monday = Workday"
+        },
+        {
+            "Tuesday": "No one cares about Tuesday"
+        },
+        {
+            "Wednesday": "It's Wednesday. Who are you crushing on"
+        },
+        {
+            "Thursday": "Throw back Thursday...Anyone?"
+        },
+        {
+            "Friday": "Today is Friday. Get your groove on!"
+        },
+        {
+            "Saturday": "Cleanliness is next to Godliness, Time for Chores!"
+        }
+    ]
+    
+    let greetingText = document.querySelector('.greeting-text');
+    greetingText.textContent = greeting[day][today];
+    console.log(greetingText)
+}
+
+
+
+// Set Day, Hour, Minute and Sec
+let hour = document.querySelector('.hour');
+let minute = document.querySelector('.minute');
+let second = document.querySelector('.second');
+let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+let day = new Date().getDay();
+let today = days[day];
+
+function displayTime() {
+    let currentDay = document.querySelector('.day');
+    currentDay.textContent = today.toUpperCase();
+    let hours = new Date().getHours();
+    hour.textContent = `${hours} :`
+    let minutes = new Date().getMinutes();
+    minute.textContent = `${minutes} :`
+    let seconds = new Date().getSeconds();
+    second.textContent = `${seconds}`
+    if (today) { greet(); }
+}
+
+setInterval(displayTime, 1000);
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const quotes = [
     {
       'quote':
