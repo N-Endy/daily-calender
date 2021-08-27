@@ -1,5 +1,7 @@
 
 (function() {
+
+  // Displays Heading message for the day
   function greet() {
     const greeting = [
         {
@@ -27,7 +29,6 @@
     
     let greetingText = document.querySelector('.greeting-text');
     greetingText.textContent = greeting[day][today];
-    console.log(greetingText)
 }
 
 
@@ -43,12 +44,19 @@ let today = days[day];
 function displayTime() {
     let currentDay = document.querySelector('.day');
     currentDay.textContent = today.toUpperCase();
-    let hours = new Date().getHours();
-    hour.textContent = `${hours} :`
-    let minutes = new Date().getMinutes();
-    minute.textContent = `${minutes} :`
-    let seconds = new Date().getSeconds();
-    second.textContent = `${seconds}`
+
+    let hours = new Date().getHours().toString();
+    hours = hours.length == 1 ? 0+hours : hours;
+    hour.textContent = `${hours} :`;
+
+    let minutes = new Date().getMinutes().toString();
+    minutes = minutes.length == 1 ? 0+minutes : minutes;
+    minute.textContent = `${minutes} :`;
+
+    let seconds = new Date().getSeconds().toString();
+    seconds = seconds.length == 1 ? 0+seconds : seconds;
+    second.textContent = `${seconds}`;
+
     if (today) { greet(); }
 }
 
@@ -56,29 +64,8 @@ setInterval(displayTime, 1000);
 })();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Display Motivational messages
+let motivationalDiv = document.querySelector('.motivational');
 
 const quotes = [
     {
@@ -139,3 +126,16 @@ const quotes = [
         'quote': 'Life is what happens when you\’re busy making other plans.'
         }
   ];
+
+  window.addEventListener('load', loadQuote);
+
+  function loadQuote() {
+    let random = Math.floor(Math.random() * quotes.length);
+    console.log(random)
+
+    document.querySelector(".quote").textContent = quotes[random].quote;
+    document.querySelector(".author").textContent = '-'+quotes[random].author;
+  }
+
+
+  
