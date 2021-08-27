@@ -5,30 +5,40 @@
   function greet() {
     const greeting = [
         {
-            "Sunday": "You need Jesus! Go to Church!"
+            "Sunday": "You need Jesus! Go to Church!",
+            "bg": "8c3b04"
         },
         {
-            "Monday": "Hello! It's Monday. Monday = Workday"
+            "Monday": "Hello! It's Monday. Monday = Workday",
+            "bg": "#2f4a70"
         },
         {
-            "Tuesday": "No one cares about Tuesday"
+            "Tuesday": "No one cares about Tuesday",
+            "bg": "#827f54"
         },
         {
-            "Wednesday": "It's Wednesday. Who are you crushing on"
+            "Wednesday": "It's Wednesday. Who are you crushing on",
+            "bg": "#c29400"
         },
         {
-            "Thursday": "Throw back Thursday...Anyone?"
+            "Thursday": "Throw back Thursday...Anyone?",
+            "bg": "#c56a19"
         },
         {
-            "Friday": "Today is Friday. Get your groove on!"
+            "Friday": "Today is Friday. Get your groove on!",
+            "bg": "#dcb413"
         },
         {
-            "Saturday": "Cleanliness is next to Godliness, Time for Chores!"
+            "Saturday": "Cleanliness is next to Godliness, Time for Chores!",
+            "bg": "#c91e1f"
         }
     ]
     
     let greetingText = document.querySelector('.greeting-text');
     greetingText.textContent = greeting[day][today];
+
+    let container = document.querySelector('.container');
+    container.style.backgroundColor = greeting[day].bg;
 }
 
 
@@ -127,8 +137,6 @@ const quotes = [
         }
   ];
 
-  window.addEventListener('load', loadQuote);
-
   function loadQuote() {
     let random = Math.floor(Math.random() * quotes.length);
     console.log(random)
@@ -137,5 +145,4 @@ const quotes = [
     document.querySelector(".author").textContent = '-'+quotes[random].author;
   }
 
-
-  
+  window.addEventListener('load', loadQuote);

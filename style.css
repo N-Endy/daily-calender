@@ -1,6 +1,4 @@
-:root {
-    --bg-monday: ;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 * {
     padding: 0;
@@ -8,11 +6,16 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #2e1300;
+}
+
 .container {
-    width: 100vw;
+    width: 80vw;
     height: 100vh;
-    background: purple;
-    color: #fff;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
 }
 
 .container .text {
@@ -32,7 +35,7 @@
 
 .container .motivation {
     height: 25%;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     text-align: right;
     font-size: 0.9rem;
