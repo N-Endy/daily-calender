@@ -1,0 +1,39 @@
+:root {
+    --bg-monday: ;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: purple;
+    color: #fff;
+}
+
+.container .text {
+    width: 50%;
+    height: 50vh;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.container .time {
+    height: 25%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.container .motivation {
+    height: 25%;
+    width: 50%;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 0.9rem;
+}
