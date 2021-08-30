@@ -6,66 +6,89 @@
     box-sizing: border-box;
 }
 
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.mb {
+    margin-bottom: 1.5rem;
+}
+
 body {
     background: #2e1300;
+    height: 100vh;
+    width: 100vw;
 }
 
 .container {
-    width: 80vw;
-    height: 100vh;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100%;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     color: #000;
 }
 
 .container .text {
-    width: 50%;
-    height: 50vh;
     margin: 0 auto;
     padding: 3rem;
     text-align: center;
     font-size: 1.7rem;
+    border: 1px solid #f4f4f4;
+    box-shadow: 1px 1px 8px 1px black;
 }
 
 .container .time {
-    height: 25%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
     text-align: center;
     font-size: 1.2rem;
+    border: 1px solid #f4f4f4;
+    box-shadow: 1px 1px 8px 1px black;
 }
 
 .container .motivation {
-    height: 25%;
-    width: 40%;
+    padding: 1rem;
+    width: 50%;
     margin: 0 auto;
     text-align: right;
     font-size: 0.9rem;
+    border: 1px solid #f4f4f4;
+    box-shadow: 1px 1px 8px 1px black;
 }
 
 /* Media Query */
-@media(min-width: 360px) {
+@media(max-width: 360px) {
     .container .text {
-        width: 100%;
         font-size: 1rem;
+        padding: 1rem;
     }
 
     .container .time {
+        width: 100%;
         font-size: 1.2rem;
     }
 
     .container .motivation {
+        width: 100%;
         font-size: 1.3rem;
     }
 }
-@media(min-width: 768px) {
+@media(max-width: 768px) {
     .container .text {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+        padding: 1rem;
     }
 
     .container .time {
-        font-size: 2rem;
+        width: 100%;
+        font-size: 1.5rem;
     }
 
     .container .motivation {
-        font-size: 1.3rem;
+        width: 100%;
+        font-size: 1.5rem;
     }
 }

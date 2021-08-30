@@ -139,7 +139,6 @@ const quotes = [
 
   function loadQuote() {
     let random = Math.floor(Math.random() * quotes.length);
-    console.log(random)
 
     document.querySelector(".quote").textContent = quotes[random].quote;
     document.querySelector(".author").textContent = '-'+quotes[random].author;
