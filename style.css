@@ -40,3 +40,32 @@ body {
     text-align: right;
     font-size: 0.9rem;
 }
+
+/* Media Query */
+@media(min-width: 360px) {
+    .container .text {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .container .time {
+        font-size: 1.2rem;
+    }
+
+    .container .motivation {
+        font-size: 1.3rem;
+    }
+}
+@media(min-width: 768px) {
+    .container .text {
+        font-size: 1.7rem;
+    }
+
+    .container .time {
+        font-size: 2rem;
+    }
+
+    .container .motivation {
+        font-size: 1.3rem;
+    }
+}
