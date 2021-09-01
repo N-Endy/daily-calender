@@ -17,7 +17,7 @@
             "bg": "#827f54"
         },
         {
-            "Wednesday": "It's Wednesday. Who are you crushing on",
+            "Wednesday": "It's Wednesday. Who are you crushing on?",
             "bg": "#c29400"
         },
         {
@@ -144,4 +144,5 @@ const quotes = [
     document.querySelector(".author").textContent = '-'+quotes[random].author;
   }
 
-  window.addEventListener('load', loadQuote);
+ 
+  setInterval(loadQuote, 9000);
